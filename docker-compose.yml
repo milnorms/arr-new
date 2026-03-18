@@ -27,7 +27,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/appdata/radarr:/config
-      - /data:/data
+      - /drive/data:/data
 
 ###############################################
 # SONARR - TV Shows
@@ -42,7 +42,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/appdata/sonarr:/config
-      - /data:/data
+      - /drive/data:/data
 
 ###############################################
 # LIDARR - Music
@@ -57,7 +57,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/appdata/lidarr:/config
-      - /data:/data
+      - /drive/data:/data
 
 ###############################################
 # BAZARR - Subtitles
@@ -72,7 +72,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/appdata/bazarr:/config
-      - /data/media:/data/media
+      - /drive/data/media:/data/media
 
 ###############################################
 # PROWLARR - Indexer Manager
@@ -106,7 +106,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/appdata/qbittorrent:/config
-      - /data:/data
+      - /drive/data:/data
 
 ###############################################
 # JELLYFIN - Media Server
@@ -119,7 +119,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/appdata/jellyfin:/config
-      - /data/media:/data/media:ro #read-only
+      - /drive/data/media:/data/media:ro #read-only
     ports:
       - 8096:8096
 
