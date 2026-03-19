@@ -45,21 +45,6 @@ services:
       - /drive/data:/data
 
 ###############################################
-# LIDARR - Music
-###############################################
-
-  lidarr:
-    <<: *common-keys
-    container_name: lidarr
-    image: ghcr.io/hotio/lidarr:latest
-    ports:
-      - 8686:8686
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - /docker/appdata/lidarr:/config
-      - /drive/data:/data
-
-###############################################
 # BAZARR - Subtitles
 ###############################################
 
