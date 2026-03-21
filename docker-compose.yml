@@ -113,10 +113,10 @@ services:
 ###############################################
 
   seerr:
-      <<: *common-keys
+    <<: *common-keys
+    container_name: seerr
     image: ghcr.io/seerr-team/seerr:latest
     init: true
-    container_name: seerr
     ports:
       - 5055:5055
     volumes:
